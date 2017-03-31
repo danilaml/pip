@@ -18,5 +18,5 @@ test_script:
     - echo %PYTHON%\\Scripts\\tox.exe -e py -- -m unit -n 8 >> C:\\runtests.bat
     - chcp 65001
     - net user aBcАбВ123äα 12345678aBc /add
-    - net localgroup administrators aBcАбВ123 /add
+    - net localgroup administrators aBcАбВ123äα /add
     - psexec \\localhost -u aBcАбВ123äα -p 12345678aBc -accepteula C:\\runtests.bat
