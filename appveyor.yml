@@ -14,7 +14,6 @@ install:
 build: off
 test_script:
     - echo cd C:\projects\pip > C:\\runtests.bat
-    - echo set PATH="%PATH%" >> C:\\runtests.bat
     - echo %PYTHON%\\Scripts\\tox.exe -e py -- -m unit -n 8 >> C:\\runtests.bat
     - chcp 65001
     - net user aBcАбВ123äα 12345678aBc /add
