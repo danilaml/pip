@@ -13,4 +13,10 @@ install:
     cmd: "%PYTHON%\\python.exe -m pip install tox"
 build: off
 test_script:
-    - "%PYTHON%\\Scripts\\tox.exe -e py -- -m unit -n 8"
+    - echo cd C:\projects\pip > C:\\runtests.bat
+    - echo set PATH="%PATH%" >> C:\\runtests.bat
+    - echo %PYTHON%\\Scripts\\tox.exe -e py -- -m unit -n 8 >> C:\\runtests.bat
+    - chcp 65001
+    - net user aBcАбВ123äα 12345678aBc /add
+    - net localgroup administrators aBcАбВ123 /add
+    - psexec \\localhost -u aBcАбВ123äα -p 12345678aBc -accepteula C:\\runtests.bat
